@@ -9,30 +9,27 @@ php-signal is a slim PHP wrapper around [signal-cli](https://github.com/AsamK/si
 - Manage Groups
 - Manage Profile
 - Manage Device
-- Receive Messages (Not as Daemon)
+- Receive Messages by command or by daemon
 - Check if Number exist on Signal Server
 - Register, Verify and Unregister Number
-
-## How to Install signal-cli
-
-Please refer official [Installation Doc](https://github.com/AsamK/signal-cli#installation)
+- Auto install dbus daemon
+- Auto daemon message receive
+- Auto install signal-cli
+- Auto update signal-cli
 
 **Note**: Please make sure to keep .so|.dylib library in same directory as the binary
 ## Installation
 
-    composer require jigarakatidus/php-signal
+    composer require Tsjippy/php-signal
 
 ## Usage
 
     require 'vendor/autoload.php';
     
-    use jigarakatidus\Signal;
+    use SIM\Signal;
     
-    $client = new Signal(
-        '/Users/jigar.d/signal-cli/bin/signal-cli', // Binary Path
-        '+919664*****', // Username/Number including Country Code with '+' 
-        Signal::FORMAT_JSON // Format
-    );
+    $client = new Signal(); // When not on dbus i.e. on windows
+    $client = new SignalBus();
     
     // Register the Number (username)
     $client->register()
@@ -91,8 +88,8 @@ More details from command can be fetched. eg:
     $client->getCommand()->getExitCode();
 
 ## Testing
-- This works with [signal-cli 0.9.2](https://github.com/AsamK/signal-cli/releases/tag/v0.9.2)
-- Tested on PHP 7.3
+- This works with [signal-cli 0.11.4](https://github.com/AsamK/signal-cli/releases/tag/v0.9.2)
+- Tested on PHP 7.3-8.1
 
 ## TODO
 - Unit Tests
