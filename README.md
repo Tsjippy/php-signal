@@ -26,7 +26,8 @@ php-signal is a slim PHP wrapper around [signal-cli](https://github.com/AsamK/si
 
     require 'vendor/autoload.php';
     
-    use SIM\Signal;
+    use SIM\SIGNAL\Signal;
+    use SIM\SIGNAL\SignalBus;
     
     $client = new Signal(); // When not on dbus i.e. on windows
     $client = new SignalBus();
