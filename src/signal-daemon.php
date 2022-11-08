@@ -14,6 +14,7 @@ if(!empty($argv) && count($argv) == 2){
     set_time_limit(0);
 
     include_once __DIR__.'/Signal.php';
+    include_once __DIR__.'/SignalBus.php';
 
     $signal = new SignalBus();
 
