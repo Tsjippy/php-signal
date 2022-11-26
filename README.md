@@ -20,11 +20,12 @@ php-signal is a slim PHP wrapper around [signal-cli](https://github.com/AsamK/si
 **Note**: Please make sure to keep .so|.dylib library in same directory as the binary
 ## Installation
 
-    composer require Tsjippy/php-signal
+   Download the files in the src directory 
 
 ## Usage
 
-    require 'vendor/autoload.php';
+    require 'Signal.php';
+    require 'SignalBus.php';
     
     use SIM\SIGNAL\Signal;
     use SIM\SIGNAL\SignalBus;
