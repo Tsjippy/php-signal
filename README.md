@@ -3,7 +3,7 @@
 php-signal is a slim PHP wrapper around [signal-cli](https://github.com/AsamK/signal-cli)
 
 I have put the code here for reference, adjust it to your needs
-Find the most up to date files here: https://github.com/Tsjippy/sim-plugin/tree/main/includes/modules/signal
+Find the most up to date files here: https://github.com/Tsjippy/sim-plugin/tree/main/includes/modules/signal/php/classes
 
 ## Features:
 
